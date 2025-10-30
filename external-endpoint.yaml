@@ -1,0 +1,10 @@
+kind: Endpoints
+apiVersion: v1
+metadata:
+  name: external-svc
+subsets:
+  - addresses:
+      - ip: 40.89.244.232 # Duck Duck Go's IP address
+    ports:
+      - port: 80
+        name: web
