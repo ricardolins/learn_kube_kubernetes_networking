@@ -1,10 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-svc
+  name: nginx-headless
 spec:
+  clusterIP: None
   selector:
-    app: nginx
+    app: nginx-headless
   ports:
     - port: 80
       targetPort: 80
